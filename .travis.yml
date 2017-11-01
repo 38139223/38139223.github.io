@@ -1,26 +1,31 @@
-language: node_js # 设置语言
+nguage: node_js
 
-node_js: stable # 设置相应版本
+node_js: stable
+
+cache:
+    apt: true
+    directories:
+        - node_modules
+
+before_install:
+    - export TZ='Asia/Shanghai'
+    - npm install hexo-cli -g
+    - chmod +x ./push.sh
 
 install:
     - npm install
+
 script:
-    - hexo clean # 清除
-    - hexo g # 生成
+    - hexo clean
+    - hexo g
 
 after_script:
-    - cd ./public
-    - git init
-    - git config user.name "38139223" # 修改name
-    - git config user.email "baidong_6265@qq.com" # 修改email
-    - git add .
-    - git commit -m "Travis CI Auto Builder"
-    - git push --force --quiet "https://${travisToken}@${GH_REF}" master:master # GH_TOKEN是在Travis中配置token的名称
+    - ./push.sh
 
 branches:
     only:
-        - hexo #只监测hexo分支，hexo是我的分支的名称，可根据自己情况设置
+        - hexo
 
 env:
     global:
-        - GH_REF: github.com/38139223/38139223.github.io.git #设置GH_REF，注意更改yourname
+        - GH_REF: github.com/38139223/38139223.github.io.git
