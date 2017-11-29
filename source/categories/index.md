@@ -1,4 +1,3 @@
----
-title: categories
-date: 2017-11-29 15:59:50
+layout: categories
+comments: false
 ---
