@@ -32,7 +32,7 @@ brand: /img/brand.jpg
 favicon: /favicon.ico
 
 # email
-email: zhengheforum@gmail.com
+email: webmaster#b-gg.com
 
 # 设置 Android L Chrome 浏览器状态栏颜色
 color: '#3F51B5'
@@ -117,7 +117,7 @@ canonical: false
 since_year: 2015
 
 # 用户页面中作者相关的描述性文字，如不需要设为 false
-about: 郑和国际和平基金会作为一个非盈利、非政府机构，致力于促进中国和穆斯林世界的学术交流、提升华人和穆斯林之间的理解和友谊。
+about: 日积月累B-GG
 
 # “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
@@ -126,8 +126,8 @@ visit_counter:
 
 # 动态定义title
 title_change:
-  normal: 郑和国际和平基金会
-  leave: ZhengheForum.org
+  normal: 大B哥哥
+  leave: B-gg.com
 
 # 设置为 true 发布后将使用 unpkg cdn
 cdn: true
