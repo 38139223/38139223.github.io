@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://b-gg.com/2017/07/12/php-operator/index.html">
 <meta property="og:site_name" content="Saritai">
 <meta property="og:description" content="php基础之运算符   运算符是所有编程语言的基本功，任何语言，这都是基础。 算数运算符   ／ %，简单讲就是加、减、乘、除、余（模数）。eg:12345678&amp;lt;?php   $a = 50;   $b = 4   echo($a + $b);    echo($a - $b);    echo($a * $b);    echo($a / $b);    echo($a % $b);">
-<meta property="og:updated_time" content="2017-11-30T07:28:01.747Z">
+<meta property="og:updated_time" content="2017-11-30T07:50:43.071Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="php operator">
 <meta name="twitter:description" content="php基础之运算符   运算符是所有编程语言的基本功，任何语言，这都是基础。 算数运算符   ／ %，简单讲就是加、减、乘、除、余（模数）。eg:12345678&amp;lt;?php   $a = 50;   $b = 4   echo($a + $b);    echo($a - $b);    echo($a * $b);    echo($a / $b);    echo($a % $b);">
@@ -190,7 +190,73 @@
 <h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>  赋值运算符，最容易理解也最常用的就是$a = 100;$a = $b; ‘=’右侧的表达式为其左侧变量设置值。<br>  在此基础上演变出来了一些其他的赋值符号：<br>  $a += 10;  等同于 $a = $a+10; 其他同理如：”-=”、”*=”、”/=”、”%=” </p>
 <h2 id="字符串运算符"><a href="#字符串运算符" class="headerlink" title="字符串运算符"></a>字符串运算符</h2><p>  字符串运算符，”.”和演变出的”.=”<br>eg:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">  $a = &quot;Hello&quot;;</div><div class="line">  $b = $a.&quot;world!&quot;;</div><div class="line">  echo $b;</div><div class="line">  $a .= &quot;world!&quot;;</div><div class="line">  echo $a;</div></pre></td></tr></table></figure></p>
 <h2 id="递增／递减运算符"><a href="#递增／递减运算符" class="headerlink" title="递增／递减运算符"></a>递增／递减运算符</h2><p>  之所以把这类单独拎出来是因为，常有人混淆，常有人拿这个来面试。++、–符号分别表示递增、递减。<br>  ++$a 和 $a++ 的区别：++$a是先运算再返回变量值，$a++则是先返回值在运算。</p>
-<h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><p>  比较运算符顾名思义是比较两个值（数字或者字符串）。<br> | 运算符 | 名称           | 例子                           | 结果                                                      |<br> | :——-: | —————:| ——————————-: | ———————————————————-: |<br> | ==    | 等于       |            $x == $y| 如果 $x 等于 $y，则返回 true。                            |<br> | ===    | 全等（完全相同）    | $x === $y    | 如果 $x 等于 $y，且它们类型相同，则返回 true。|<br> | !=    | 不等于    | $x != $y    | 如果 $x 不等于 $y，则返回 true。|<br> | &lt;&gt;    | 不等于    | $x &lt;&gt; $y    | 如果 $x 不等于 $y，则返回 true。|<br> | !==    | 不全等（完全不同）    | $x !== $y    | 如果 $x 不等于 $y，或它们类型不相同，则返回 true。|<br> | &gt;    | 大于    |$x &gt; $y    | 如果 $x 大于 $y，则返回 true。|<br> | &lt;    | 大于    |$x &lt; $y    | 如果 $x 小于 $y，则返回 true。|<br> | &gt;=    | 大于或等于    | $x &gt;= $y    | 如果 $x 大于或者等于 $y，则返回 true。|<br> | &lt;=    | 小于或等于    | $x &lt;= $y    | 如果 $x 小于或者等于 $y，则返回 true。|</p>
+<h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><p>  比较运算符顾名思义是比较两个值（数字或者字符串）。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">运算符</th>
+<th style="text-align:right">名称</th>
+<th style="text-align:right">例子</th>
+<th style="text-align:right">结果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">==</td>
+<td style="text-align:right">等于</td>
+<td style="text-align:right">$x == $y</td>
+<td style="text-align:right">如果 $x 等于 $y，则返回 true。</td>
+</tr>
+<tr>
+<td style="text-align:center">===</td>
+<td style="text-align:right">全等（完全相同）</td>
+<td style="text-align:right">$x === $y</td>
+<td style="text-align:right">如果 $x 等于 $y，且它们类型相同，则返回 true。</td>
+</tr>
+<tr>
+<td style="text-align:center">!=</td>
+<td style="text-align:right">不等于</td>
+<td style="text-align:right">$x != $y</td>
+<td style="text-align:right">如果 $x 不等于 $y，则返回 true。</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&gt;</td>
+<td style="text-align:right">不等于</td>
+<td style="text-align:right">$x &lt;&gt; $y</td>
+<td style="text-align:right">如果 $x 不等于 $y，则返回 true。</td>
+</tr>
+<tr>
+<td style="text-align:center">!==</td>
+<td style="text-align:right">不全等（完全不同）</td>
+<td style="text-align:right">$x !== $y</td>
+<td style="text-align:right">如果 $x 不等于 $y，或它们类型不相同，则返回 true。</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;</td>
+<td style="text-align:right">大于</td>
+<td style="text-align:right">$x &gt; $y</td>
+<td style="text-align:right">如果 $x 大于 $y，则返回 true。</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;</td>
+<td style="text-align:right">大于</td>
+<td style="text-align:right">$x &lt; $y</td>
+<td style="text-align:right">如果 $x 小于 $y，则返回 true。</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;=</td>
+<td style="text-align:right">大于或等于</td>
+<td style="text-align:right">$x &gt;= $y</td>
+<td style="text-align:right">如果 $x 大于或者等于 $y，则返回 true。</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;=</td>
+<td style="text-align:right">小于或等于</td>
+<td style="text-align:right">$x &lt;= $y</td>
+<td style="text-align:right">如果 $x 小于或者等于 $y，则返回 true。</td>
+</tr>
+</tbody>
+</table>
 <h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><p>  与或非，&amp;&amp;、||、!，还有and、or、xor，需要注意的是xor不是’非’，而是表示’异或’,与’或’的区别是’有且仅有一个为 true，才返回 true’。<br>比较运算符和逻辑运算符构成的表达式，其结果均为布尔型。</p>
 <h2 id="数组运算符"><a href="#数组运算符" class="headerlink" title="数组运算符"></a>数组运算符</h2><p>  数组运算符里除了’+’号是表示两个数组的联合（不覆盖重复值），其返回值还是数组。其他的”==、===、!=、&lt;&gt;、!==”和比较运算符一样，其返回值均为布尔型。</p>
 
@@ -200,7 +266,7 @@
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2017-11-30T07:28:01.747Z" itemprop="dateUpdated">2017-11-30 15:28:01</time>
+    Last updated: <time datetime="2017-11-30T07:50:43.071Z" itemprop="dateUpdated">2017-11-30 15:50:43</time>
 </span><br>
 
 
@@ -290,7 +356,7 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/07/07/about-array-map/" id="post-next" class="post-nav-link">
+      <a href="/2017/07/07/map/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
         <h4 class="title">about/array_map</h4>
       </a>
